@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 2.8)
+PROJECT(gao)
+ADD_SUBDIRECTORY(src bin)
+SET(BINARY_OUTPUT_PATH ${PROJECT_BINARY_PATH}/bin )

@@ -1,0 +1,6 @@
+SET(SRC_LST gao.c gao7.c gao8.c)
+ADD_EXECUTABLE(gao ${SRC_LST})
+TARGET_LINK_LIBRARIES(gao zbPrint ncursesw rt )
+INCLUDE_DIRECTORIES(gao ~/presentation/zbPrint)
+SET(CMAKE_INSTALL_PREFIX /usr)
+INSTALL(TARGETS gao DESTINATION bin/)

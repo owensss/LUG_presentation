@@ -1,0 +1,16 @@
+gao: gao7.o gao8.o gao.c
+	gcc gao.c gao7.c gao8.c -o gao
+
+gao7.o: gao7.c gao7.h
+	gcc gao7.c -c -o gao7.o
+
+gao8.o: gao8.h gao8.c
+	gcc gao8.c -c -o gao8.o
+
+.PHONY : clean
+clean:
+	rm *.o
+
+.PHONY : install
+install:
+	install -m 755 gao /usr/bin
